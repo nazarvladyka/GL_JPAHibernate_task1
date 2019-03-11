@@ -4,6 +4,8 @@ import dao.DepartmentDao;
 import models.Department;
 import models.Workers;
 
+import java.util.List;
+
 public class DepartmentService {
     private DepartmentDao departmentDao = new DepartmentDao();
 
@@ -25,9 +27,9 @@ public class DepartmentService {
         departmentDao.update(department);
     }
 
-//    public List<Department> findAllDepartments() {
-//        return departmentDao.findAll();
-//    }
+    public List<Department> findAllDepartments() {
+        return departmentDao.findAll();
+    }
 
     public Workers findWorkerById(int id) {
         return departmentDao.findWorkerById(id);

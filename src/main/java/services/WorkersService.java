@@ -27,9 +27,9 @@ public class WorkersService {
         workersDao.update(worker);
     }
 
-//    public List<Workers> findAllWorkers() {
-//        return workersDao.findAll();
-//    }
+    public List<Workers> findAllWorkers() {
+        return workersDao.findAll();
+    }
 
     public Department findDepartmentById(int id) {
         return workersDao.findDepartmentById(id);

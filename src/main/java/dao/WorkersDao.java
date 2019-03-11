@@ -41,8 +41,8 @@ public class WorkersDao {
         return HibernateUtils.getSessionFactory().openSession().get(Department.class, id);
     }
 
-//    public List<Workers> findAll() {
-//        List<Workers> workers = (List<Workers>) HibernateUtils.getSessionFactory().openSession().createQuery("From Workers").list();
-//        return workers;
-//    }
+    public List<Workers> findAll() {
+        List<Workers> workers = (List<Workers>) HibernateUtils.getSessionFactory().openSession().createQuery("From Workers").list();
+        return workers;
+    }
 }

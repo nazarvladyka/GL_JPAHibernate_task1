@@ -41,8 +41,8 @@ public class DepartmentDao {
         return HibernateUtils.getSessionFactory().openSession().get(Workers.class, id);
     }
 
-////    public List<Department> findAll() {
-////        List<Department> departments = (List<Department>) HibernateUtils.getSessionFactory().openSession().createQuery("From Department").list();
-////        return departments;
-////    }
+    public List<Department> findAll() {
+        List<Department> departments = (List<Department>) HibernateUtils.getSessionFactory().openSession().createQuery("From Department").list();
+        return departments;
+    }
 }
