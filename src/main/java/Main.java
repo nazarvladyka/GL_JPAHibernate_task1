@@ -1,3 +1,4 @@
+import dao.Availability;
 import models.Department;
 import models.Workers;
 import services.DepartmentService;
@@ -7,10 +8,10 @@ public class Main {
         DepartmentService departmentService = new DepartmentService();
         Department department = new Department("Sun", true);
         departmentService.saveDepartment(department);
-        Workers stepan = new Workers(26, "full time", "Stepan Gorodniy");
+        Workers stepan = new Workers(26, Availability.FullTime, "Stepan Gorodniy");
         stepan.setDepartment(department);
         department.addWorker(stepan);
-        Workers olya = new Workers(35, "part time", "Olya Stepanova");
+        Workers olya = new Workers(35, Availability.FullTime, "Olya Stepanova");
         olya.setDepartment(department);
         department.addWorker(olya);
         departmentService.updateDepartment(department);

@@ -10,7 +10,7 @@ CREATE TABLE Department (
 CREATE TABLE Workers (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	age INT NOT NULL,
-	availability ENUM('full time', 'part time'),
+	availability VARCHAR(40),
 	full_name VARCHAR(40),
     department_id INT NOT NULL,
     FOREIGN KEY(department_id) REFERENCES Department(id)

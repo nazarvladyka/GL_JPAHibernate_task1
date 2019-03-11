@@ -1,5 +1,7 @@
 package models;
 
+import dao.Availability;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,8 +12,9 @@ public class Workers {
     private int id;
     @Column(name = "age")
     private int age;
+    @Enumerated(value = EnumType.STRING)
     @Column(name = "availability")
-    private String availability;
+    private Availability availability;
     @Column(name = "full_name")
     private String fullName;
 
@@ -21,7 +24,7 @@ public class Workers {
 
     public Workers() { }
 
-    public Workers(int age, String availability, String fullName) {
+    public Workers(int age, Availability availability, String fullName) {
         this.age = age;
         this.availability = availability;
         this.fullName = fullName;
@@ -39,11 +42,11 @@ public class Workers {
         this.age = age;
     }
 
-    public String getAvailability() {
+    public Availability getAvailability() {
         return availability;
     }
 
-    public void setAvailability(String availability) {
+    public void setAvailability(Availability availability) {
         this.availability = availability;
     }
 
