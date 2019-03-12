@@ -24,10 +24,11 @@ public class Workers {
 
     public Workers() { }
 
-    public Workers(int age, Availability availability, String fullName) {
+    public Workers(int age, Availability availability, String fullName, Department department) {
         this.age = age;
         this.availability = availability;
         this.fullName = fullName;
+        this.department = department;
     }
 
     public int getId() {
@@ -58,11 +59,11 @@ public class Workers {
         this.fullName = fullName;
     }
 
-    public Department getDepartment() {
+    public Department getDepartmentId() {
         return department;
     }
 
-    public void setDepartment(Department department) {
+    public void setDepartmentId(Department department) {
         this.department = department;
     }
 

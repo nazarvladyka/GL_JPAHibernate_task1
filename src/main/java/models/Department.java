@@ -27,7 +27,7 @@ public class Department {
     }
 
     public void addWorker(Workers worker) {
-        worker.setDepartment(this);
+        worker.setDepartmentId(this);
         workers.add(worker);
     }
 

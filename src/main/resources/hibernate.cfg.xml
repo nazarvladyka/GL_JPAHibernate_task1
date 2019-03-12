@@ -9,9 +9,5 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="show_sql">true</property>
-
-        <mapping class="models.Workers"/>
-        <mapping class="models.Department"/>
     </session-factory>
 </hibernate-configuration>
